@@ -1,0 +1,55 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+---
+
+<Layout title={`Revisions | ${SITE.title}`}>
+  <Header />
+  <main id="main-content">
+    <div class="mx-9 mt-5">
+      <h1 class="text-3xl text-neutral-400 mb-3">Build Revisions</h1>
+
+      <div class="row">
+        <div class="column">
+            <h3>Version Number</h3>
+            <p>0.00.01</p>
+        </div>
+        <div class="column">
+            <h3>Description</h3>
+            <p>Add this Revisions page and tailwind plugins for full page bleed and animations</p>
+        </div>
+        <div class="column">
+            <p>0.00.02</p>
+        </div>
+        <div class="column">
+            <p>Add Version to config file</p>
+        </div>
+      </div>
+      <LinkButton
+        href="/"
+        className="my-6 text-lg underline decoration-dashed underline-offset-8"
+      >
+        Go back home
+      </LinkButton>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+.row{
+    display: grid;
+    grid-template-columns: 250px auto;
+}
+.row > div {
+  border-bottom: 1px solid #a3a3a3;
+}
+.column {
+    padding: 16px;
+    height: auto;
+}
+</style>

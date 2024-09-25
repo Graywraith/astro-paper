@@ -9,6 +9,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE, SOCIALS } from "@config";
+import { Intro } from "partials/intro";
 
 const posts = await getCollection("blog");
 
@@ -23,7 +24,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>Richard Noake</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -42,11 +43,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        Hi, you have reached the online profile & blog of <span class="italic">me - richard noake</span><br /><br />
       </p>
+      <Intro />
       <p>
         Read the blog posts or check
         <LinkButton

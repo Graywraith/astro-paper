@@ -11,6 +11,7 @@ export const SITE: Site = {
   postPerIndex: 4,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  version: "1.00.002",
 };
 
 export const LOCALE = {
